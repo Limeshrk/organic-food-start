@@ -97,31 +97,32 @@ body {
   font-weight: 500;
 }
 
+/* ------ Bellow the line ------ */
+
 .main-menu-area {
   display: flex;
   align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   border-top: 2px solid lightgray;
-  padding-top: 0.5em;
+  padding: 0.5em 15vw 0 15vw;
 }
 
 .menubar-logo {
   height: 2.5em;
-  margin-left: 15vw;
-  align-content: center;
+  align-self: flex-start;
 }
 
 .main-menu-container {
   display: flex;
   color: white;
-  margin: 0 15vw 0 0;
-  padding: 0;
+  align-items: flex-end;
 }
 
 .search {
-  align-self: center;
-  margin-right: 15vw;
+  align-self: flex-start;
   color: white;
+  padding-top: 5px;
 }
 
 .main-menu {
@@ -129,6 +130,7 @@ body {
   margin: 0 15px auto 0;
   list-style: none;
   font-weight: 500;
+  padding: 0 0 0 0;
 }
 
 .menu-item {
@@ -148,6 +150,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* ------ END OF MENU AREA ------ */
 
 .header-content {
   padding: 0 0 10em 0;
@@ -179,6 +183,7 @@ body {
   padding: 1em 5em 1em 5em;
   margin: 1.5em auto 0 auto;
   border-radius: 2em;
+  user-select: none;
 }
 
 .shopnow-button:hover {
@@ -244,6 +249,8 @@ body {
   grid-column: 4/5;
 }
 
+/* ------ Bottom footer area ------ */
+
 footer {
   margin: 0;
   padding: 0 0 15em 0;
@@ -265,7 +272,7 @@ footer p {
   font-weight: 500;
 }
 
-/* mobile view */
+/* ------ mobile view ------ */
 
 @media (max-width: 800px) {
   /* Header display correction for smaller screen */
@@ -284,26 +291,25 @@ footer p {
     margin: 0 15px 0 0;
   }
 
-  .search {
-    margin-right: 15px;
-    color: white;
-  }
-
-  .main-menu {
+  .main-menu-area {
+    padding: 10px 25px 25px 0;
   }
 
   .menubar-logo {
-    margin-left: 15px;
+    align-self: flex-start;
   }
 
-  .main-menu-container {
-    font-size: 1em;
+  .search {
+    align-self: flex-start;
+  }
+
+  .main-menu {
     text-align: center;
     display: none;
   }
 
-  .menu-checkbox:checked ~ .main-menu-container {
-    display: flex;
+  .menu-checkbox:checked ~ .main-menu {
+    display: block;
   }
 
   /* --------------------------------  main-grid is grid  --------------------------------- */
@@ -345,8 +351,3 @@ footer p {
     grid-row: 5;
   }
 }
-
-/*  hamburger menu
-  fejléc kiigazit
-  grid átrendez
- */

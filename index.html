@@ -14,7 +14,6 @@
     <script src="./app.js"></script>
     <header>
       <div class="head-background">
-        <!-- <img src="./img/banner_image_1.jpg" alt="Header BG" class="head-img"/> -->
         <div class="head-content-area">
           <div class="fixed-head">
             <div class="opening-hours">
@@ -23,7 +22,7 @@
             <div class="myaccount">
               My Account <i class="fas fa-shopping-cart"></i>
             </div>
-            <input type="checkbox" id="toggle" class="menu-checkbox" />
+
             <label for="toggle" class="toggle-label">
               <i class="fas fa-bars"></i>
             </label>
@@ -35,14 +34,17 @@
               class="menubar-logo"
             />
             <div class="main-menu-container">
-              <ul class="main-menu">
-                <li class="menu-item"><a href="#">Home</a></li>
-                <li class="menu-item"><a href="#">About Us</a></li>
-                <li class="menu-item"><a href="#">Shop</a></li>
-                <li class="menu-item"><a href="#">Our Team</a></li>
-                <li class="menu-item"><a href="#">Blog</a></li>
-                <li class="menu-item"><a href="#">Contact Us</a></li>
-              </ul>
+              <div class="hide-menu">
+                <input type="checkbox" id="toggle" class="menu-checkbox" />
+                <ul class="main-menu">
+                  <li class="menu-item"><a href="#">Home</a></li>
+                  <li class="menu-item"><a href="#">About Us</a></li>
+                  <li class="menu-item"><a href="#">Shop</a></li>
+                  <li class="menu-item"><a href="#">Our Team</a></li>
+                  <li class="menu-item"><a href="#">Blog</a></li>
+                  <li class="menu-item"><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
               <div class="search">
                 <i class="fas fa-search"><a href="#"></a></i>
               </div>
