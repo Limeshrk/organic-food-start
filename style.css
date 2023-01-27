@@ -68,14 +68,22 @@ body {
 }
 
 .head-background {
-  background: url("./img/banner_image_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 0 0 100px 0;
 }
 
-.head-content-area {
-  backdrop-filter: brightness(50%);
-  margin: 0 0 20px 0;
+.banner-bg {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  max-height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: -1;
+  filter: brightness(50%);
 }
 
 .fixed-head {
@@ -153,10 +161,6 @@ body {
 
 /* ------ END OF MENU AREA ------ */
 
-.header-content {
-  padding: 0 0 250px 0;
-}
-
 .header-logo {
   width: 200px;
   display: block;
@@ -200,7 +204,7 @@ body {
 /* --------------------------------  main-grid is grid  --------------------------------- */
 .main-grid {
   padding: 0;
-  margin: 100px auto 50px auto;
+  margin: 50px auto 50px auto;
   display: grid;
   column-gap: 40px;
   align-items: center;
@@ -266,7 +270,7 @@ footer {
   width: 100vw;
   height: auto;
   object-fit: cover;
-  object-position: 100% 15%;
+  object-position: 50% 15%;
 }
 
 footer p {
